@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logged in</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("../img/homebg.png");
+        background-position: top;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        width: 700px;
+        height: 400px;
+        background-color: transparent;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        box-shadow: 10px 10px 21px rgba(0, 0, 0, 1);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 10px 20px; */
+        > .loading {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          transition: 0.4s;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        > .welcome {
+          width: 50%;
+          height: 100%;
+          padding-inline: 10px;
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          > .data {
+            font-size: 8px;
+            display: flex;
+            margin-bottom: 5px;
+          }
+        }
+        .side {
+          padding-inline: 20px;
+          background-color: #0a0a0a;
+          width: 50%;
+          height: 100%;
+          border-radius: 120px 10px 10px 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: white;
+          > h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+          }
+          > span {
+            text-align: center;
+          }
+        }
+      }
+      #sec {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loading">
+        <dotlottie-player
+          src="https://lottie.host/85a3c47f-2134-4756-b8ff-8b9213e84108/3lm7T0RfxU.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <h1>Loading...</h1>
+      </div>
+      <div class="welcome">
+        <div class="data" id="nameData">
+          <h1>Your Name : <span id="name"></span></h1>
+        </div>
+        <div class="data">
+          <h1>Your Email : <span id="email"></span></h1>
+        </div>
+        <div class="data">
+          <h1>Your Password : <span id="password"></span></h1>
+        </div>
+      </div>
+      <div class="side">
+        <h1 id="welcomeText">You are logged in</h1>
+        <span
+          >you are redirectin to home page in <span id="sec"> 3 </span> seconds
+        </span>
+      </div>
+    </div>
+  </body>
+  <script>
+    const loading = document.querySelector(".loading");
+    const t = document.getElementById("sec");
+    const welcomeText = document.getElementById("welcomeText");
+    const nameBox = document.getElementById("nameData");
+    const nameHolder = document.getElementById("name");
+    const emailHolder = document.getElementById("email");
+    const passHolder = document.getElementById("password");
+    const nameData = document.getElementById("nameData");
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("Name");
+    const email = params.get("Email");
+    const password = params.get("Password");
+    const num = email.indexOf("@");
+    if (name != null) {
+      nameHolder.innerText = name;
+      welcomeText.innerText = "Your account created";
+    } else {
+      nameBox.remove();
+      welcomeText.innerText = "You are logged in";
+    }
+    emailHolder.innerHTML = email.substring(0, num);
+    passHolder.innerHTML = password;
+    setTimeout(function () {
+      loading.style.opacity = "0";
+      setInterval(function () {
+        if (Number(t.innerText) != 0) {
+          t.innerText = Number(t.innerText) - 1;
+        }
+      }, 1000);
+      setTimeout(function () {
+        window.location.href = "https://www.aliasghardev.ir";
+      }, 3000);
+    }, 2000);
+  </script>
+  <script
+    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+    type="module"
+  ></script>
+</html>

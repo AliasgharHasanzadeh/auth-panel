@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+span {
+  text-align: center;
+}
+a {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  transition-timing-function: ease-in-out;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/homebg.png");
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 700px;
+  min-height: 400px;
+  background-color: white;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 10px 10px 21px rgba(0, 0, 0, 1);
+  position: relative;
+  
+}
+.form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 30px;
+  width: 50%;
+  height: 100%;
+  transition: 0.7s;
+  border-radius: 12px;
+  > h1 {
+    margin-bottom: 5px;
+  }
+  > span {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  > a {
+    margin-top: 20px;
+    /* color: white; */
+    text-decoration: none;
+    font-size: 14px;
+  }
+  > button {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 3px solid #0a0a0a;
+    transition: 0.4s;
+    &:hover {
+      transform: translate(8px, 0px);
+    }
+  }
+}
+.inp-box {
+  width: 100%;
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  transition: box-shadow 0.3s, border 0.3s;
+  gap: 8px;
+  &:nth-of-type(1) {
+    margin-top: 15px;
+  }
+  &:last-child {
+    margin-bottom: 15px;
+  }
+  > input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    &::placeholder {
+      color: black;
+    }
+  }
+}
+.inp-box:focus-within {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.16);
+  border: 1.5px solid #7ed6df;
+}
+.login {
+  z-index: 2;
+  opacity: 1;
+  /* background-color: red; */
+}
+.createAccount {
+  opacity: 0;
+  z-index: 1;
+  /* background-color: aqua; */
+}
+
+/* toggle panels */
+.toggle-panel {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.7s;
+  border-radius: 12px;
+  background-color: #0a0a0a;
+  border-radius: 120px 12px 12px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    > span {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  * {
+    color: white;
+  }
+}
+.btnToggle {
+  color: #0a0a0a;
+  background-color: #fff;
+  /* font-size: 12px; */
+  padding: 10px 5px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+  border: 3px solid white;
+  transition: 0.4s;
+  &:hover {
+    background-color: #0a0a0a;
+    color: #fff;
+    transform: translate(8px, 0px);
+  }
+}
+.toggle-right {
+  z-index: 5;
+}
+.toggle-left {
+  z-index: 4;
+}
+.right-con {
+  transform: translateX(0%);
+  transition: 0.7s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-con {
+  transform: translateX(-200%);
+  transition: 0.7s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container.toggle {
+  > .form-container {
+    transform: translateX(100%);
+  }
+  > .login {
+    opacity: 0;
+    z-index: 1;
+  }
+  > .createAccount {
+    z-index: 2;
+    opacity: 1;
+  }
+  /* toggle panels */
+  > .toggle-panel {
+    transform: translateX(-100%);
+    border-radius: 12px 100px 120px 12px;
+  }
+  > .toggle-right {
+    z-index: 4;
+    > .right-con {
+      transform: translateX(200%);
+    }
+  }
+  > .toggle-left {
+    z-index: 5;
+    > .left-con {
+      transform: translateX(0%);
+    }
+  }
+}
