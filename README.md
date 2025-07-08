@@ -1,6 +1,7 @@
 # 🔐 Auth Panel
 
 🚀 [Live Demo](https://auth.aliasghardev.ir/)
+
 A simple and responsive Authentication Panel for user **login**, **registration**, and **password reset**.  
 Includes **Regex-based validation** for secure and accurate user input checks.
 
