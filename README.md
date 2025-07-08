@@ -5,17 +5,18 @@ Includes **Regex-based validation** for secure and accurate user input checks.
 
 ---
 
-## 🚀 [Live Demo](https://auth.aliasghardev.ir/) *(if deployed)*
+**🚀 [Live Demo](https://auth.aliasghardev.ir/) *(if deployed)**
 
 ---
 
-## 🛠️ Technologies Used:
+**🛠️ Technologies Used:**
 - **HTML**
 - **CSS**
 - **JavaScript**
 
 ---
-## ✨ Features:
+
+**✨ Features:**
 - **✅ Login, Register & Password Reset**
 - **🔐 Regex-based Input Validation**
 - **🧠 Custom Error Messages**
@@ -24,10 +25,10 @@ Includes **Regex-based validation** for secure and accurate user input checks.
 
 ---
 
-## 👨‍💻 Role:
+**👨‍💻 Role:**
 Frontend Developer
 
 ---
 
-## 🧪 Regex Validation:
+**🧪 Regex Validation:**
 This project uses **regular expressions (Regex)** for validating email and password fields:
