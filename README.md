@@ -5,7 +5,7 @@ Includes **Regex-based validation** for secure and accurate user input checks.
 
 ---
 
-**🚀 [Live Demo](https://auth.aliasghardev.ir/) **
+🚀 [Live Demo](https://auth.aliasghardev.ir/)
 
 ---
 
