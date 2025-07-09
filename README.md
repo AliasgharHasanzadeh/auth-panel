@@ -23,10 +23,3 @@ Includes **Regex-based validation** for secure and accurate user input checks.
 
 ---
 
-**👨‍💻 Role:**
-Frontend Developer
-
----
-
-**🧪 Regex Validation:**
-This project uses **regular expressions (Regex)** for validating email and password fields:
