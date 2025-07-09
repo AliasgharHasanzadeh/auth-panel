@@ -34,4 +34,10 @@ Includes **Regex-based validation** for secure and accurate user input checks.
   </tr>
 </table>
 
+--- 
+**reach me in :**
+[LinkedIn](https://www.linkedin.com/in/aliasghar-hasanzadeh/) 
+[Instagram](https://www.instagram.com/aliasghar.dev?igsh=cmg5ZnJvMDMxODdu) 
+[codepen](https://codepen.io/Aliasghar-Hasanzadeh) 
+
 
