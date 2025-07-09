@@ -23,14 +23,14 @@ Includes **Regex-based validation** for secure and accurate user input checks.
 
 ---
 
-<table>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/3757669e-9f8a-4e69-a8c9-6a3cfcbe0ee3" width="200"/></td>
-    <td><img src="./images/image2.png" width="200"/></td>
+<table width="100%">
+  <tr width="100%">
+    <td width="50%"><img src="https://github.com/user-attachments/assets/3757669e-9f8a-4e69-a8c9-6a3cfcbe0ee3" width="100%"/></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/3f0cc2ba-e5b5-4db0-9971-4291cc60d3ab" width="100%"/></td>
   </tr>
-  <tr>
-    <td><img src="./images/image3.png" width="200"/></td>
-    <td><img src="./images/image4.png" width="200"/></td>
+   <tr width="100%">
+    <td width="50%"><img src="https://github.com/user-attachments/assets/71a33b56-7cb3-4a32-b78b-6a42a9d4a8da" width="100%"/></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/4f58d9e4-6e90-415b-a1a3-02f04a42710e" width="100%"/></td>
   </tr>
 </table>
 
